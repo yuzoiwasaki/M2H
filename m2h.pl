@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 use FindBin;
-use Text::Markdown qw/markdown/;
+use Text::Markdown::Discount qw/markdown/;
 
 my $file = shift;
 my $script_dir = $FindBin::Bin;
@@ -59,7 +59,7 @@ print $fh1 $html;
 print $fh1 $footer;
 close $fh1;
 
-unless($option) {
+unless ($option) {
   system("open -a Safari $OUTFILE");
 }
 print $html;
